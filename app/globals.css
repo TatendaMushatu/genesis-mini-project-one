@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --clr-blue: #052c54;
+  --clr-red: #ff5a5f;
+  --clr-sky: #f8fafc;
+  --clr-dark: #11181c;
+
+  --swiper-navigation-size: 20px !important;
+  --swiper-navigation-color: #ffffff;
+}
+body{
+  background-color: var(--clr-sky);
+  color: var(--clr-dark);
+}
+.icon-link{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  background: linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5));
+}
+
+.card-grid{
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.semi-transparent{
+  background-color: rgba(0,0,0,.5);
+}
+.passthrough{
+  pointer-events: none;
+}
+.swiper-slide{
+  height: auto !important;
+}
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  } */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
